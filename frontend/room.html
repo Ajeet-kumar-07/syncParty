@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Room</title>
+
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+
+</head>
+
+<body>
+
+<h1>Music Room</h1>
+
+<p>
+Room:
+<span id="roomId"></span>
+</p>
+
+<p>
+User:
+<span id="username"></span>
+</p>
+
+<p>
+Host Status:
+<span id="hostStatus">
+Unknown
+</span>
+</p>
+
+<hr>
+
+<h2 id="songTitle">
+No Song
+</h2>
+
+<h2 id="timer">
+00:00 / 03:00
+</h2>
+
+<hr>
+
+<h3>users online</h3>
+
+<ul id="usersList"></ul>
+
+<hr>
+
+<h3>Invite Link</h3>
+
+<input
+    id="inviteLink"
+    readonly
+    style="width:500px"
+/>
+
+<button id="copyLinkBtn">
+    Copy Link
+</button>
+
+<button id="playBtn">
+PLAY
+</button>
+
+<button id="pauseBtn">
+PAUSE
+</button>
+
+<hr>
+
+<input
+    id="songInput"
+    placeholder="Song Name"
+/>
+
+<button id="setSongBtn">
+Set Song
+</button>
+
+<hr>
+
+<input
+    id="seekInput"
+    type="number"
+    placeholder="Seek Seconds"
+/>
+
+<button id="seekBtn">
+Seek
+</button>
+
+<hr>
+
+<input
+    id="queueSong"
+    placeholder="Queue Song"
+/>
+
+<button id="addSongBtn">
+Add Song
+</button>
+
+<hr>
+
+<h3>Queue</h3>
+
+<ul id="queue"></ul>
+
+<hr>
+
+<h3>Logs</h3>
+
+<hr>
+
+<h3>Room Chat</h3>
+
+<div
+    id="chatMessages"
+    style="
+        height:250px;
+        overflow-y:auto;
+        border:1px solid #ccc;
+        padding:10px;
+    "
+></div>
+
+<br>
+
+<input
+    id="chatInput"
+    placeholder="Type a message..."
+>
+
+<button id="sendMessageBtn">
+    Send
+</button>
+<div id="logs"></div>
+
+<script src="./js/room.js"></script>
+
+</body>
+</html>
